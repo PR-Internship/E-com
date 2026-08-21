@@ -1,0 +1,215 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 20px 0 40px 0;
+}
+
+.home-intro-banner-split {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
+  align-items: start;
+  text-align: left;
+}
+
+.home-intro-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.home-intro-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.home-tagline-pill {
+  background: var(--accent-glow);
+  color: var(--accent-primary);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border-radius: 30px;
+}
+
+.home-main-title {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+.home-intro-desc {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.masonry-gallery-container {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.gallery-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 4px 15px rgba(148, 163, 184, 0.08);
+  transition: var(--transition-smooth);
+  background: #ffffff;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(148, 163, 184, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-section-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.section-pill-badge {
+  background: #ffffff;
+  border: 1px solid var(--panel-border);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(148, 163, 184, 0.04);
+}
+
+.section-heading-dark {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.section-subheading-muted {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.testimonial-card-light {
+  background: #ffffff;
+  border: 1px solid var(--panel-border);
+  padding: 36px 30px;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 4px 20px rgba(148, 163, 184, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: var(--transition-smooth);
+}
+
+.testimonial-card-light:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(148, 163, 184, 0.1);
+  border-color: var(--panel-border-hover);
+}
+
+.stars-rating-row {
+  display: flex;
+  gap: 4px;
+}
+
+.star-gold {
+  color: var(--accent-secondary);
+  fill: var(--accent-secondary);
+}
+
+.testimonial-quote-text {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+.testimonial-author-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--panel-border);
+  padding-top: 16px;
+}
+
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 968px) {
+.home-main-title {
+    font-size: 36px;
+  }
+
+.home-intro-banner-split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+    margin: 30px auto;
+  }
+
+.home-intro-left, .home-intro-right {
+    align-items: center;
+    text-align: center;
+  }
+
+.masonry-gallery-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+.gallery-column:nth-child(n+5) {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+.masonry-gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+.gallery-column:nth-child(n+3) {
+    display: none;
+  }
+}
